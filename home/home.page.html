@@ -1,0 +1,150 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-avatar>
+        <ion-img src="../../assets/Images/img3.jfif" (click)="goToProfile()"></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Gapshap &nbsp;<ion-icon name="notifications-outline"></ion-icon>
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides [options]="sliderConfig">
+    <ion-slide *ngFor="let item of list">
+      <ion-card>
+        <ion-card-content>
+          <img src="../../assets/Images/img5.jfif" />
+        </ion-card-content>
+        <ion-text>{{item || '-' }}</ion-text>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card>
+    <img src="../../assets/Images/img1.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/Images/img1.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Sarfaraz</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon color="light" class="small" name="star-sharp"></ion-icon>
+        <ion-label color="light" class="small">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon color="light" class="small" name="chatbox"></ion-icon>
+        <ion-label color="light" class="small">21</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon color="light" class="small" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/Images/img2.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/Images/img2.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Arman</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon color="light" class="small" name="star-sharp"></ion-icon>
+        <ion-label color="light" class="small">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon color="light" class="small" name="chatbox"></ion-icon>
+        <ion-label color="light" class="small">21</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon color="light" class="small" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/Images/img3.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/Images/img3.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Teja</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon color="light" class="small" name="star-sharp"></ion-icon>
+        <ion-label color="light" class="small">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon color="light" class="small" name="chatbox"></ion-icon>
+        <ion-label color="light" class="small">21</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon color="light" class="small" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/Images/img4.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/Images/img4.jfif" ></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Arman 2</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon color="light" class="small" name="star-sharp"></ion-icon>
+        <ion-label color="light" class="small">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon color="light" class="small" name="chatbox"></ion-icon>
+        <ion-label color="light" class="small">21</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon color="light" class="small" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+  </ion-card>
+
+  <div id="container">
+
+    <!-- <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+  </div>
+
+  <ion-select [hidden]="true" interface="action-sheet" #mySelect (ionChange)="goToProfile()">
+    <ion-select-option value="enable">Enable</ion-select-option>
+    <ion-select-option value="mute">Mute</ion-select-option>
+    <ion-select-option value="mute_week">Mute for a week</ion-select-option>
+    <ion-select-option value="mute_year">Mute for a year</ion-select-option>
+  </ion-select>
+</ion-content>
