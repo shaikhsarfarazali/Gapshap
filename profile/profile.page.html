@@ -1,7 +1,7 @@
 <ion-content class="bg">
-  <ion-img src="../../assets/Images/bg1.jfif" ></ion-img>
+  <ion-img class="bg-img" src="../../assets/images/bg1.jfif"></ion-img>
   <ion-icon color="light" class="top-right" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
-  <ion-icon color="light" class="top-left" name="camera-outline"></ion-icon>
+  <ion-icon color="light" class="top-left" name="camera-outline" (click)="selectImage()"></ion-icon>
 
   <ion-card class="bottom-center">
     <ion-card-header>
@@ -9,25 +9,42 @@
         <ion-row>
           <ion-col size="3">
             <ion-avatar>
-              <ion-img src="../../assets/Images/img3.jfif"></ion-img>
+              <ion-img src="../../assets/images/img3.jfif"></ion-img>
             </ion-avatar>
           </ion-col>
-          <ion-col class="border" size="3">
-            <ion-text>11 <br> Posts</ion-text>
-          </ion-col> 
-          <ion-col class="border" size="3">
-            <ion-text>30 Followers</ion-text>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="3">
+                <div class="border">
+                  <ion-text >11 <br> Posts</ion-text>
+                </div>
+              </ion-col>
+              <ion-col size="4">
+                <div class="border">
+                  <ion-text >30 <br> Followers</ion-text>
+                </div>
+              </ion-col>
+              <ion-col size="4">
+                <div class="border">
+                  <ion-text>20 <br> Followings</ion-text>
+                </div>
+              </ion-col>
+              <ion-col class="border adjust" size="1">
+                <ion-icon name="chevron-down-sharp"></ion-icon>
+              </ion-col>
+            </ion-row>
+            
           </ion-col>
-          <ion-col class="border" size="3">
-            <ion-text>20 Followings</ion-text>
-          </ion-col>
+          
+        </ion-row>
+        <ion-row>
         </ion-row>
       </ion-grid>
-      
+
       <ion-card-subtitle>Sarfaraz Ali Shaikh</ion-card-subtitle>
       <strong>@sarfaraz</strong>
     </ion-card-header>
-  
+
     <ion-card-content>
       <ion-grid>
         <ion-row>
@@ -35,34 +52,81 @@
             <ion-chip (click)="changeMedia('pic')" [ngClass]="!activePics ? 'inactive' : 'active'">
               <ion-label>Photos</ion-label>
             </ion-chip>
-            <!-- <ion-text>Photos</ion-text> -->
           </ion-col>
           <ion-col size="3">
-            <ion-chip (click)="changeMedia('vdo')" [ngClass]="!activeVideo ? 'inactive' : 'active'"
-            >
+            <ion-chip (click)="changeMedia('vdo')" [ngClass]="!activeVideo ? 'inactive' : 'active'">
               <ion-label>Videos</ion-label>
             </ion-chip>
-            <!-- <ion-text>Videos</ion-text> -->
           </ion-col>
           <ion-col size="3">
             <ion-chip (click)="changeMedia('tags')" [ngClass]="!activeTags ? 'inactive' : 'active'">
               <ion-label>Tags</ion-label>
             </ion-chip>
-            <!-- <ion-text>Tags</ion-text> -->
           </ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col *ngFor="let item of media;let i=index" size="6">
-            <ion-img  src="../../assets/Images/bg1.jfif"></ion-img>
-          </ion-col>
+        <ion-row class="main-row">
+          <div class="grid">
+            <img src="../../assets/images/img1.jfif">
+            <img src="../../assets/images/img2.jfif">
+            <img src="../../assets/images/img3.jfif">
+            <img src="../../assets/images/img_1.jpg">
+            <img src="../../assets/images/img_2.jpg">
+            <img src="../../assets/images/img_3.jpg">
+            <img src="../../assets/images/img_4.jpg">
+            <img src="../../assets/images/img4.jfif">
+            <img src="../../assets/images/img5.jfif">
+            <img src="../../assets/images/img6.jfif">
+            <img src="../../assets/images/img7.jfif">
+            <img src="../../assets/images/img8.jfif">
+            <img src="../../assets/images/img9.jfif">
+            <img src="../../assets/images/img1.jfif">
+            <img src="../../assets/images/img2.jfif">
+            <img src="../../assets/images/img3.jfif">
+            <img src="../../assets/images/img_1.jpg">
+            <img src="../../assets/images/img_2.jpg">
+            <img src="../../assets/images/img_3.jpg">
+            <img src="../../assets/images/img_4.jpg">
+            <img src="../../assets/images/img4.jfif">
+            <img src="../../assets/images/img5.jfif">
+            <img src="../../assets/images/img6.jfif">
+            <img src="../../assets/images/img7.jfif">
+            <img src="../../assets/images/img8.jfif">
+            <img src="../../assets/images/img9.jfif">
+            <img src="../../assets/images/img1.jfif">
+            <img src="../../assets/images/img2.jfif">
+            <img src="../../assets/images/img3.jfif">
+            <img src="../../assets/images/img_1.jpg">
+            <img src="../../assets/images/img_2.jpg">
+            <img src="../../assets/images/img_3.jpg">
+            <img src="../../assets/images/img_4.jpg">
+            <img src="../../assets/images/img4.jfif">
+            <img src="../../assets/images/img5.jfif">
+            <img src="../../assets/images/img6.jfif">
+            <img src="../../assets/images/img7.jfif">
+            <img src="../../assets/images/img8.jfif">
+            <img src="../../assets/images/img9.jfif">
+            <img src="../../assets/images/img1.jfif">
+            <img src="../../assets/images/img2.jfif">
+            <img src="../../assets/images/img3.jfif">
+            <img src="../../assets/images/img_1.jpg">
+            <img src="../../assets/images/img_2.jpg">
+            <img src="../../assets/images/img_3.jpg">
+            <img src="../../assets/images/img_4.jpg">
+            <img src="../../assets/images/img4.jfif">
+            <img src="../../assets/images/img5.jfif">
+            <img src="../../assets/images/img6.jfif">
+            <img src="../../assets/images/img7.jfif">
+            <img src="../../assets/images/img8.jfif">
+            <img src="../../assets/images/img9.jfif">
+          </div>
         </ion-row>
       </ion-grid>
     </ion-card-content>
   </ion-card>
   <ion-select [hidden]="true" interface="action-sheet" #mySelect (ionChange)="goToProfile()">
-    <ion-select-option value="enable">Enable</ion-select-option>
-    <ion-select-option value="mute">Mute</ion-select-option>
-    <ion-select-option value="mute_week">Mute for a week</ion-select-option>
-    <ion-select-option value="mute_year">Mute for a year</ion-select-option>
+    <ion-select-option value="enable">Settings</ion-select-option>
+    <ion-select-option value="archive">Archive</ion-select-option>
+    <ion-select-option value="your_activity">Your activity</ion-select-option>
+    <ion-select-option value="qr_code">QR Code</ion-select-option>
   </ion-select>
 </ion-content>

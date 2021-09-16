@@ -1,0 +1,17 @@
+.main-row{
+    height: 65.8vh;
+    overflow: auto;
+}
+  .inactive{
+    background: none;
+    color: lightgray;
+  }
+  .active{
+    background: none;
+    color: black;
+  }
+  ion-grid{
+      ion-row{
+          border-bottom: 1px solid lightgray;
+      }
+  }

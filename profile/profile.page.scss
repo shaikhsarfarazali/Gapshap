@@ -1,10 +1,11 @@
 .bg{
-  ion-img{
+  margin: 0px;
+  position: relative;
+  .bg-img{
     object-fit: fill;
     height: 33vh;
   }
-  margin: 0px;
-  position: relative;
+
   .top-right{
     height: 27px;
     font-size: 21px;
@@ -16,6 +17,7 @@
     border-radius: 9px;
     padding: 5px;
   }
+
   .top-left{
     height: 27px;
     font-size: 21px;
@@ -27,25 +29,39 @@
     border-radius: 9px;
     padding: 5px;
   }
+
   .bottom-center {
-    background-color: rgb(253, 248, 239);
-    width: 98%;
+    background-color: #f6f5f5;
+    width: 100%;
     position: absolute;
     top: 11rem;
-    left: -6px;
-    border-radius: 25px;
-    height: 100vh;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin: 0;
+
     ion-card-header{
       ion-grid{
+        padding: 0%;
         ion-row{
+          display: flex;
           .border{
-            border: 1px solid rgb(187, 187, 187);
+            padding: 7px;
             background-color: white;
-            border-radius: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-right: 5px;
+          }
+          .adjust{
+            padding: 4px;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            height: 43px;
           }
           ion-col{
             margin: auto;
             text-align: center;
+            padding: 0px;
             ion-avatar{
               ion-img{
                 height: 60px;
@@ -56,6 +72,10 @@
       }
     }
     ion-card-content{
+      .main-row{
+        height: 65.8vh;
+        overflow: auto;
+      }
       .inactive{
         background: none;
         color: lightgray;
@@ -65,5 +85,18 @@
         color: black;
       }
     }
+  }
+}
+
+
+// masonry layout
+.grid {
+  column-count: 3;
+  column-gap: .5em;
+  max-width: 980px;
+  margin: auto;
+  width: 100%;
+  img{
+    border-radius: 10px;
   }
 }

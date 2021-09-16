@@ -1,0 +1,176 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="person-outline" (click)="goTo('profile')"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Gapshap &nbsp;<ion-icon  (click)="goTo('notify')" name="notifications-outline"></ion-icon>
+      <ion-icon name="search-outline" (click)="goTo('search')"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides [options]="sliderConfig">
+    <ion-slide *ngFor="let item of list">
+      <ion-card>
+        <ion-card-content>
+          <div>
+            <img src="../../assets/images/formal_1.jpg">
+          </div>
+        </ion-card-content>
+        <ion-text>{{item || '-' }}</ion-text>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-card>
+    <img src="../../assets/images/img1.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/images/img1.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Sarfaraz</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon class="small" color="light" name="star-sharp"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon class="small" color="light" name="chatbox"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon class="small" color="light" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/images/img2.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/images/img2.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Arman</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon class="small" color="light" name="star-sharp"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon class="small" color="light" name="chatbox"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon class="small" color="light" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+
+
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/images/img3.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/images/img3.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Arman 1</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon class="small" color="light" name="star-sharp"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon class="small" color="light" name="chatbox"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon class="small" color="light" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/images/img4.jfif" />
+    <div class="top-left">
+      <ion-avatar>
+        <ion-img src="../../assets/images/img4.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label color="light">Arman 2</ion-label>
+    </div>
+    <ion-icon color="light" class="top-right small" name="ellipsis-vertical-sharp" (click)="openSelect()"></ion-icon>
+
+    <div class="bottom-left">
+      <div class="star">
+        <ion-icon class="small" color="light" name="star-sharp"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="msg">
+        <ion-icon class="small" color="light" name="chatbox"></ion-icon>
+        <ion-label class="small" color="light">221</ion-label>
+      </div>
+      <div class="forward">
+        <ion-icon class="small" color="light" name="send"></ion-icon>
+      </div>
+    </div>
+    <ion-icon color="light" class="bottom-right small" name="bookmark-outline"></ion-icon>
+  </ion-card>
+  <div id="container">
+
+    <!-- <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+  </div>
+
+  <ion-select [hidden]="true" interface="action-sheet" #mySelect (ionChange)="goToProfile()">
+    <ion-select-option value="enable">Enable</ion-select-option>
+    <ion-select-option value="mute">Mute</ion-select-option>
+    <ion-select-option value="mute_week">Mute for a week</ion-select-option>
+    <ion-select-option value="mute_year">Mute for a year</ion-select-option>
+  </ion-select>
+</ion-content>
+
+<ion-footer>
+  <ion-tabs>
+    <ion-icon name="arrow-up-outline" class="icon-button inner-center-btn"></ion-icon>
+  
+    <ion-tab-bar slot="bottom" class="bottom-tab-bar">
+  
+      <ion-tab-button (click)="goTo('folder/inbox')">
+        <ion-icon mode="md" name="home-outline"></ion-icon>
+        <!-- <ion-label>Home</ion-label> -->
+      </ion-tab-button>
+  
+      <ion-tab-button class="inner-left-btn" (click)="goTo('chat')">
+        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button class="button-center">
+  
+      </ion-tab-button>
+  
+      <ion-tab-button class="inner-right-btn" (click)="goTo('search')">
+        <ion-icon name="videocam-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="settings" (click)="goTo('notify')">
+        <ion-icon name="musical-notes-outline"></ion-icon>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

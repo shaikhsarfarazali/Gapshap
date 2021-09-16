@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/folder/inbox"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Shaikh_Sarfaraz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <ion-chip (click)="changeMedia('chat')" [ngClass]="!activeChat ? 'inactive' : 'active'">
+          <ion-label>Chat</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col size="3">
+        <ion-chip (click)="changeMedia('tag')" [ngClass]="!activeTag ? 'inactive' : 'active'">
+          <ion-label>Active</ion-label>
+        </ion-chip>
+      </ion-col>
+      <ion-col size="3">
+        <ion-chip (click)="changeMedia('request')" [ngClass]="!activeRequest ? 'inactive' : 'active'">
+          <ion-label>Request</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item *ngFor="let item of chatData">
+      <ion-avatar slot="start" (click)="goTo('profile')">
+        <ion-img src="../../assets/images/img1.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label (click)="goTo('profile')">
+        <h2>Shaikh Sarfaraz</h2>
+        <p><strong>Active </strong> 4h ago</p>
+      </ion-label>
+      <ion-icon name="camera-outline" (click)="goTo('folder/inbox')"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/folder/inbox"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Activity</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <h4>This Week</h4>
+  <ion-list>
+    <ion-item *ngFor="let item of activity; let i= index" (click)="goTo('profile')">
+      <ion-avatar slot="start">
+        <ion-img src="../../assets/images/img2.jfif"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>arman_tz and 312 others follow you</h2>
+        <p>4d ago</p>
+      </ion-label>
+      <ion-button>Follow</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
