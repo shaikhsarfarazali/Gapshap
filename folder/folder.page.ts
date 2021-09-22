@@ -2,8 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IonSelect } from '@ionic/angular';
 
-
-
 @Component({
   selector: 'app-folder',
   templateUrl: './folder.page.html',
@@ -11,6 +9,8 @@ import { IonSelect } from '@ionic/angular';
 })
 export class FolderPage implements OnInit {
   @ViewChild('mySelect', { static: false }) selectRef: IonSelect;
+
+  croppedImg: string;
 
   sliderConfig = {
     slidesPerView: 4.6,
@@ -46,4 +46,5 @@ export class FolderPage implements OnInit {
   goTo(ev){
     this.router.navigate([ev]);
   }
+  
 }

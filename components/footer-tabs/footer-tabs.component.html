@@ -1,0 +1,27 @@
+<ion-footer>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <span class="nav-indicator"></span>
+  
+      <ion-tab-button [ngClass]="home? 'nav-item-active':'' " (click)="goTo('folder/inbox')">
+        <ion-icon mode="md" name="home-outline"></ion-icon>
+        <span class="title">Home</span>
+      </ion-tab-button>
+  
+      <ion-tab-button [ngClass]="chat? 'nav-item-active':'' " (click)="goTo('chat')">
+        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        <ion-badge>6</ion-badge>
+        <span class="title">Chat</span>
+      </ion-tab-button>
+  
+      <ion-tab-button [ngClass]="search? 'nav-item-active': '' " (click)="goTo('search')">
+        <ion-icon name="videocam-outline"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button [ngClass]="notify? 'nav-item-active' : '' " (click)="goTo('notify')">
+        <ion-icon name="musical-notes-outline"></ion-icon>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

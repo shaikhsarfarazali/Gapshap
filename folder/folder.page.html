@@ -12,15 +12,21 @@
 <ion-content [fullscreen]="true">
 
   <ion-slides [options]="sliderConfig">
-    <ion-slide *ngFor="let item of list">
+    <!-- <ion-slide *ngFor="let item of list">
       <ion-card>
-        <ion-card-content>
-          <div>
+          <div class="space">
             <img src="../../assets/images/formal_1.jpg">
           </div>
-        </ion-card-content>
         <ion-text>{{item || '-' }}</ion-text>
       </ion-card>
+    </ion-slide> -->
+    <ion-slide *ngFor="let item of list">
+      <ion-card>
+        <div class="space">
+          <img src="../../assets/images/formal_1.jpg">
+        </div>
+      </ion-card>
+      <h6>{{item || '-' }}</h6>
     </ion-slide>
   </ion-slides>
 
@@ -143,34 +149,4 @@
   </ion-select>
 </ion-content>
 
-<ion-footer>
-  <ion-tabs>
-    <ion-icon name="arrow-up-outline" class="icon-button inner-center-btn"></ion-icon>
-  
-    <ion-tab-bar slot="bottom" class="bottom-tab-bar">
-  
-      <ion-tab-button (click)="goTo('folder/inbox')">
-        <ion-icon mode="md" name="home-outline"></ion-icon>
-        <!-- <ion-label>Home</ion-label> -->
-      </ion-tab-button>
-  
-      <ion-tab-button class="inner-left-btn" (click)="goTo('chat')">
-        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-        <ion-badge>6</ion-badge>
-      </ion-tab-button>
-  
-      <ion-tab-button class="button-center">
-  
-      </ion-tab-button>
-  
-      <ion-tab-button class="inner-right-btn" (click)="goTo('search')">
-        <ion-icon name="videocam-outline"></ion-icon>
-      </ion-tab-button>
-  
-      <ion-tab-button tab="settings" (click)="goTo('notify')">
-        <ion-icon name="musical-notes-outline"></ion-icon>
-      </ion-tab-button>
-  
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-footer>
+<app-footer-tabs activePage="home"></app-footer-tabs>
